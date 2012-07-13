@@ -1,5 +1,25 @@
-tmp/*
-config/database.php
-app/tmp/*
-app/config/database.php
+# Config files that should not be inside git repository
+*Config/database.php
+*Config/core.php
+*Config/bootstrap.php
+*Config/email.php
 !empty
+
+# temporary files
+*tmp/cache/models/myapp_cake_*
+*tmp/cache/persistent/myapp_cake_*
+*tmp/cache/views/myapp_cake_*
+*tmp/logs/*.log
+*tmp/sessions/myapp_cake_*
+*tmp/tests/myapp_cake_*
+
+# temporary files in the lib
+lib/Cake/Console/Templates/skel/tmp/cache/models/myapp_cake_*
+lib/Cake/Console/Templates/skel/tmp/cache/persistent/myapp_cake_*
+lib/Cake/Console/Templates/skel/tmp/cache/views/myapp_cake_*
+lib/Cake/Console/Templates/skel/tmp/logs/*.log
+lib/Cake/Console/Templates/skel/tmp/sessions/myapp_cake_*
+lib/Cake/Console/Templates/skel/tmp/tests/myapp_cake_*
+
+# for mac os x users
+*.DS_Store
