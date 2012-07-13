@@ -7,6 +7,32 @@ App::uses('AppController', 'Controller');
  */
 class UsersController extends AppController {
 
+
+/**
+ * initDB method
+ *
+ * this is to decide what permissions to use
+ *
+ * @return void
+ */
+	public function initDB() {
+	    $group = $this->User->Group;
+	    //Allow admins to everything
+	    $group->id = 1;
+	    $this->Acl->allow($group, 'controllers');
+
+	    //allow  to posts and widgets
+	    $group->id = 2;
+	    $this->Acl->deny($group, 'controllers');
+	    $this->Acl->allow($group, 'controllers/Stories/add');
+	    $this->Acl->allow($group, 'controllers/Clients/add');
+		//$this->Acl->allow($group, 'controllers/OAuth/OAuth/token');
+
+	    //we add an exit to avoid an ugly "missing views" error message
+	    echo "all done";
+	    exit;
+	}
+
 /**
  * index method
  *
