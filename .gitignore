@@ -1,17 +1,17 @@
 # Config files that should not be inside git repository
-*Config/database.php
-*Config/core.php
-*Config/bootstrap.php
-*Config/email.php
+*/Config/database.php
+*/Config/core.php
+*/Config/bootstrap.php
+*/Config/email.php
 !empty
 
 # temporary files
-*tmp/cache/models/myapp_cake_*
-*tmp/cache/persistent/myapp_cake_*
-*tmp/cache/views/myapp_cake_*
-*tmp/logs/*.log
-*tmp/sessions/myapp_cake_*
-*tmp/tests/myapp_cake_*
+*/tmp/cache/models/myapp_cake_*
+*/tmp/cache/persistent/myapp_cake_*
+*/tmp/cache/views/myapp_cake_*
+*/tmp/logs/*.log
+*/tmp/sessions/myapp_cake_*
+*/tmp/tests/myapp_cake_*
 
 # temporary files in the lib
 lib/Cake/Console/Templates/skel/tmp/cache/models/myapp_cake_*
